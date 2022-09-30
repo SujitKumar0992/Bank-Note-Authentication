@@ -67,7 +67,7 @@ def predict_note_file():
             description: The output values
         
     """
-    df_test=pd.read_csv(request.files.get(r"file"))
+    df_test=pd.read_csv(request.files.get("file"))
     print(df_test.head())
     prediction=classifier.predict(df_test)
     
